@@ -24,7 +24,7 @@ BRp.getCachedImage = function( url, crossOrigin, onLoad ){
     var dataUriPrefix = 'data:';
     var isDataUri = url.substring( 0, dataUriPrefix.length ).toLowerCase() === dataUriPrefix;
     if( !isDataUri ){
-      image.crossOrigin = crossOrigin; // prevent tainted canvas
+      image.crossOrigin = null; // prevent tainted canvas
     }
 
     image.src = url;
